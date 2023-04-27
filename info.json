@@ -108,8 +108,6 @@
                 "name": "02 - Use Case - SOC Use Cases"
             }
         ],
-        "globalVariables": [],
-        "playbookBlocks": [],
         "connectors": [
             {
                 "name": "Code Snippet",
