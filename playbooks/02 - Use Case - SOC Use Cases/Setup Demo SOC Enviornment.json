@@ -1,7 +1,7 @@
 {
     "@type": "Workflow",
     "triggerLimit": null,
-    "name": "Scenario - Create Demo Records",
+    "name": "Setup Demo SOC Enviornment",
     "aliasName": null,
     "tag": null,
     "description": "Runs all the scenario to create demo records.",
@@ -20,7 +20,7 @@
             "name": "Build Payload",
             "description": null,
             "arguments": {
-                "placeholder": "{{vars.payload.update({'records':vars.scenario_iri_list})}}"
+                "_dummy": "{{vars.payload.update({'records':vars.scenario_iri_list})}}"
             },
             "status": null,
             "top": "570",
@@ -34,7 +34,8 @@
             "name": "Configuration",
             "description": null,
             "arguments": {
-                "payload": "{\n  \"singleRecordExecution\": true,\n  \"__resource\": \"scenario\",\n  \"__uuid\": \"a10522ac-2622-40bd-ad79-4487d9a1d7d7\"\n}"
+                "payload": "{\n  \"singleRecordExecution\": true,\n  \"__resource\": \"scenario\",\n  \"__uuid\": \"a10522ac-2622-40bd-ad79-4487d9a1d7d7\"\n}",
+                "trigger_scenario_endpoint": "\/api\/triggers\/1\/action\/7f0834e0-f79e-49a2-aa19-2ef7ce9aac32"
             },
             "status": null,
             "top": "165",
@@ -77,7 +78,7 @@
                 "step_variables": [],
                 "pass_parent_env": false,
                 "pass_input_record": false,
-                "workflowReference": "\/api\/3\/workflows\/23c229fd-a6d0-4cd8-a6b1-faf6ac0333fc"
+                "workflowReference": "\/api\/3\/workflows\/32012080-abc3-4be8-904d-a80167fa8d45"
             },
             "status": null,
             "top": "840",
@@ -88,11 +89,11 @@
         },
         {
             "@type": "WorkflowStep",
-            "name": "Run Scenarios",
+            "name": "Simulate Scenarios",
             "description": null,
             "arguments": {
                 "params": {
-                    "iri": "\/api\/triggers\/1\/action\/7f0834e0-f79e-49a2-aa19-2ef7ce9aac32",
+                    "iri": "{{vars.trigger_scenario_endpoint}}",
                     "body": "{{vars.payload}}",
                     "method": "POST"
                 },
@@ -170,13 +171,13 @@
     "routes": [
         {
             "@type": "WorkflowRoute",
-            "name": "Build Payload -> Run Scenarios",
+            "name": "Build Payload -> Simulate Scenarios",
             "targetStep": "\/api\/3\/workflow_steps\/d6bd0c93-d459-485a-b559-f4f29d348793",
             "sourceStep": "\/api\/3\/workflow_steps\/8ad70888-30e0-4353-85e8-267f7e231012",
             "label": null,
             "isExecuted": false,
             "group": null,
-            "uuid": "bde7f61e-00fb-4c34-84bd-d0cfe5a7221e"
+            "uuid": "ba58269c-7c3d-4a80-920f-028386b5ba41"
         },
         {
             "@type": "WorkflowRoute",
@@ -200,13 +201,13 @@
         },
         {
             "@type": "WorkflowRoute",
-            "name": "Run Scenarios -> MITRE ATTACK Data Ingestion",
+            "name": "Simulate Scenarios -> MITRE ATTACK Data Ingestion",
             "targetStep": "\/api\/3\/workflow_steps\/0f53b984-bef0-445b-8f65-ff60ffd51f64",
             "sourceStep": "\/api\/3\/workflow_steps\/d6bd0c93-d459-485a-b559-f4f29d348793",
             "label": null,
             "isExecuted": false,
             "group": null,
-            "uuid": "b2e80a8b-2abb-41ef-83b6-712a126c92c2"
+            "uuid": "609e0fe0-3b9f-4c64-a632-48b611a1a42e"
         },
         {
             "@type": "WorkflowRoute",
@@ -226,7 +227,7 @@
             "label": null,
             "isExecuted": false,
             "group": null,
-            "uuid": "d43e683b-df56-4145-9784-5a136c02ae3b"
+            "uuid": "e1c5b536-5695-4efd-89c5-fed5eb481d80"
         }
     ],
     "groups": [],
@@ -236,6 +237,7 @@
     "isPrivate": false,
     "deletedAt": null,
     "recordTags": [
+        "ManualTrigger",
         "Scenario"
     ]
 }
