@@ -1,8 +1,107 @@
 {
-    "fsrMinCompatibility": "7.2.0",
-    "date": "2023-04-27T09:31:41+00:00",
-    "exported_from": "master.fortisoar.com",
-    "exported_by": "CS Admin",
+    "name": "sOCUseCase",
+    "version": "1.0.0",
+    "fsrMinCompatibility": "7.3.0",
+    "type": "solutionpack",
+    "local": true,
+    "label": "SOC Use Cases",
+    "dependencies": [
+        {
+            "name": "sOARFramework",
+            "type": "solutionpack",
+            "label": "SOAR Framework",
+            "minVersion": null
+        },
+        {
+            "name": "socSimulator",
+            "type": "solutionpack",
+            "label": "SOC Simulator",
+            "minVersion": null
+        },
+        {
+            "name": "phishingEmailResponse",
+            "type": "solutionpack",
+            "label": "Phishing Email Response",
+            "minVersion": null
+        },
+        {
+            "name": "bruteForceAttackResponse",
+            "type": "solutionpack",
+            "label": "Brute Force Attack Response",
+            "minVersion": null
+        },
+        {
+            "name": "mITREATT&CKEnrichmentFramework",
+            "type": "solutionpack",
+            "label": "MITRE ATT&CK Enrichment Framework",
+            "minVersion": null
+        },
+        {
+            "name": "gDPRFramework",
+            "type": "solutionpack",
+            "label": "GDPR Framework",
+            "minVersion": null
+        },
+        {
+            "name": "vulnerabilityManagement",
+            "type": "solutionpack",
+            "label": "Vulnerability Management",
+            "minVersion": null
+        },
+        {
+            "name": "automatedEmployeeOnboarding",
+            "type": "solutionpack",
+            "label": "Automated Employee Onboarding",
+            "minVersion": null
+        },
+        {
+            "name": "c2MalwareTrafficResponse",
+            "type": "solutionpack",
+            "label": "C2 Malware Traffic Response",
+            "minVersion": null
+        },
+        {
+            "name": "commandAndControlResponse",
+            "type": "solutionpack",
+            "label": "Command and Control Response",
+            "minVersion": null
+        },
+        {
+            "name": "lateralMovementAndVPNBreachResponse",
+            "type": "solutionpack",
+            "label": "Lateral Movement and VPN Breach Response",
+            "minVersion": null
+        },
+        {
+            "name": "fortiSIEMEssentials",
+            "type": "solutionpack",
+            "label": "FortiSIEM Essentials",
+            "minVersion": null
+        },
+        {
+            "name": "impossibleTravellerThreatResponse",
+            "type": "solutionpack",
+            "label": "Impossible Traveller Threat Response",
+            "minVersion": null
+        },
+        {
+            "name": "dataLeakageThreatResponse",
+            "type": "solutionpack",
+            "label": "Data Leakage Threat Response",
+            "minVersion": null
+        }
+    ],
+    "prerequisite": null,
+    "publisher": "Fortinet",
+    "description": "This Solution Pack is a collection of SPs for creating a demo setup in one click and auto-triggers some scenarios.",
+    "help": "https://github.com/fortinet-fortisoar/solution-pack-soc-use-case/blob/release/1.0.0/README.md",
+    "category": [],
+    "supportInfo": null,
+    "iconLarge": null,
+    "postInstallConfig": {
+        "enabled": false
+    },
+    "date": "2023-04-26T17:47:08+00:00",
     "contents": {
         "playbooks": [
             {
