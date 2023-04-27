@@ -23,7 +23,7 @@
                 "placeholder": "{{vars.payload.update({'records':vars.scenario_iri_list})}}"
             },
             "status": null,
-            "top": "435",
+            "top": "570",
             "left": "125",
             "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
             "group": null,
@@ -61,7 +61,7 @@
                 }
             },
             "status": null,
-            "top": "300",
+            "top": "435",
             "left": "125",
             "stepType": "\/api\/3\/workflow_step_types\/b593663d-7d13-40ce-a3a3-96dece928770",
             "group": null,
@@ -80,7 +80,7 @@
                 "workflowReference": "\/api\/3\/workflows\/23c229fd-a6d0-4cd8-a6b1-faf6ac0333fc"
             },
             "status": null,
-            "top": "705",
+            "top": "840",
             "left": "125",
             "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
             "group": null,
@@ -103,7 +103,7 @@
                 "step_variables": []
             },
             "status": null,
-            "top": "570",
+            "top": "705",
             "left": "125",
             "stepType": "\/api\/3\/workflow_step_types\/0109f35d-090b-4a2b-bd8a-94cbc3508562",
             "group": null,
@@ -143,6 +143,28 @@
             "stepType": "\/api\/3\/workflow_step_types\/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
             "group": null,
             "uuid": "7c296c78-0b6a-4344-ade0-ef8be1a64b40"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Turn Demo Mode ON",
+            "description": null,
+            "arguments": {
+                "params": {
+                    "macro": "Demo_mode",
+                    "value": "\"true\""
+                },
+                "version": "3.2.3",
+                "connector": "cyops_utilities",
+                "operation": "updatemacro",
+                "operationTitle": "FSR: Create\/Update Global Variables",
+                "step_variables": []
+            },
+            "status": null,
+            "top": "300",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/0109f35d-090b-4a2b-bd8a-94cbc3508562",
+            "group": null,
+            "uuid": "cc036d6b-dcc7-4a9a-b379-0a93259fb9f4"
         }
     ],
     "routes": [
@@ -158,13 +180,13 @@
         },
         {
             "@type": "WorkflowRoute",
-            "name": "Configuration -> Get Scenarios Details",
-            "targetStep": "\/api\/3\/workflow_steps\/24dd88f2-c559-4623-87b7-eac7c40364c2",
+            "name": "Configuration -> Turn Demo Mode ON",
+            "targetStep": "\/api\/3\/workflow_steps\/cc036d6b-dcc7-4a9a-b379-0a93259fb9f4",
             "sourceStep": "\/api\/3\/workflow_steps\/11be7170-eb18-47f0-8864-8f75e2d69a20",
             "label": null,
             "isExecuted": false,
             "group": null,
-            "uuid": "91d00548-a6d9-4615-8eb7-9095db4488ca"
+            "uuid": "94380d62-6f26-4449-89b3-0f329a9a8a0f"
         },
         {
             "@type": "WorkflowRoute",
@@ -195,6 +217,16 @@
             "isExecuted": false,
             "group": null,
             "uuid": "41490717-e43a-4f19-95c5-a0a11a4d4817"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Turn Demo Mode ON -> Get Scenarios Details",
+            "targetStep": "\/api\/3\/workflow_steps\/24dd88f2-c559-4623-87b7-eac7c40364c2",
+            "sourceStep": "\/api\/3\/workflow_steps\/cc036d6b-dcc7-4a9a-b379-0a93259fb9f4",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "d43e683b-df56-4145-9784-5a136c02ae3b"
         }
     ],
     "groups": [],
