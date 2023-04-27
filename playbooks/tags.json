@@ -1,8 +1,4 @@
 [
-    "Scenario",
-    "create",
-    "dataingestion",
-    "fetch",
-    "ingest",
-    "mitre-attack"
+    "ManualTrigger",
+    "Scenario"
 ]

@@ -5,11 +5,10 @@
         "category": "utilities",
         "description": "Execute code snippets as part of your Playbooks",
         "publisher": null,
-        "version": "2.0.3",
         "operation_roles": [],
         "configurations": [
             {
-                "id": 37,
+                "id": 4,
                 "config_id": "b5195722-9917-4e6e-ac0f-cddab46620ee",
                 "status": 1,
                 "name": "Demo",
@@ -25,6 +24,7 @@
             }
         ],
         "dataImports": [],
+        "install_mode": "rpm",
         "ingestionPlaybooks": {
             "collections": [],
             "exported_tags": []
@@ -36,7 +36,6 @@
         "category": "Information",
         "description": "The MITRE ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies. Connector helps to replicate knowledge base of adversary tactics and techniques based on real-world observations",
         "publisher": null,
-        "version": "2.0.2",
         "operation_roles": [],
         "configurations": [
             {
@@ -55,7 +54,7 @@
                 },
                 "remote_status": [],
                 "health_status": [],
-                "connector": 33,
+                "connector": 34,
                 "agent": "daa7295ca7f7d071f5253f0ce2ff499d",
                 "teams": []
             }
@@ -71,17 +70,17 @@
                 "owners": [],
                 "data_mapping": [],
                 "playbooks": [],
-                "created_at": "2023-04-27T08:49:20.511067Z",
-                "modified_at": "2023-04-27T08:50:49.242540Z",
+                "created_at": "2023-04-27T12:44:04.766267Z",
+                "modified_at": "2023-04-27T12:44:18.181411Z",
                 "metadata": {
-                    "scheduleId": "gAAAAABkSjdoed6XNTDD-5NNvYt0kfjZs01CmLqlgYi_Ow2e5RTrN1KGnkKZwPzHY2eZT7jLRdmR8gG8re7Zj0JIJFKX9-HiNA==",
+                    "scheduleId": "gAAAAABkSm4hZ3Et8L-d9nVML4i54gNAXvqNQfceLGuBAHvcW1R8XVq9e7JLwfAeChQ24nCUPOokPgqUf7_5KZrNSYhIILTyOA==",
                     "scheduleName": "Ingestion_mitre-attack_Demo_01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
                     "scheduleStatus": false
                 },
                 "previous_config_id": null,
                 "configuration": "01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
                 "schedule": {
-                    "id": "gAAAAABkSkL4zCQJAYgoxOwBjLFkUEOQST-C4Z-Y2_AAFon2ZJhoCg1ZUdvQhDWRYX_XBP1vfTdELagWJHRu6Do3BVYCyQw0Hg==",
+                    "id": "gAAAAABkSm8R2fachpqAiDd2Uiu2pwE5vU0-vKOE99aN0op82IT9MLfEvg68cLTu6KXlYeqvS8j2ectSjZ9R1hDTxwUFYNDe3g==",
                     "crontab": {
                         "id": 11,
                         "minute": "01",
@@ -97,7 +96,7 @@
                     "args": "[]",
                     "kwargs": {
                         "exit_if_running": false,
-                        "wf_iri": "\/api\/3\/workflows\/32012080-abc3-4be8-904d-a80167fa8d45",
+                        "wf_iri": "\/api\/3\/workflows\/d5a5739f-17e9-4022-9d37-8c588913afbb",
                         "createUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
                         "name": "Ingestion_mitre-attack_Demo_01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
                         "description": "Ingestion_mitre-attack_Demo_01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
@@ -106,7 +105,7 @@
                         },
                         "referenceid": null,
                         "schedule_entry_name": "Ingestion_mitre-attack_Demo_01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
-                        "schedule_id": "118fabbe-36da-41d6-aa06-23343765234e"
+                        "schedule_id": "f580dfe0-04da-4416-a853-e937c61d1390"
                     },
                     "queue": null,
                     "exchange": null,
@@ -120,13 +119,14 @@
                     "enabled": false,
                     "last_run_at": null,
                     "total_run_count": 0,
-                    "date_changed": "2023-04-27T08:50:48.910509Z",
+                    "date_changed": "2023-04-27T12:44:17.926560Z",
                     "description": "Ingestion_mitre-attack_Demo_01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
                     "solar": null,
                     "clocked": null
                 }
             }
         ],
+        "install_mode": "rpm",
         "ingestionPlaybooks": {
             "collections": [
                 {
@@ -151,7 +151,7 @@
                             "synchronous": false,
                             "collection": "\/api\/3\/workflow_collections\/01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
                             "versions": [],
-                            "triggerStep": "\/api\/3\/workflow_steps\/11ed635d-ce6c-43d4-acb5-6efdb71b12c1",
+                            "triggerStep": "\/api\/3\/workflow_steps\/338a2460-bc59-4d76-9fd3-98af5025fd1a",
                             "steps": [
                                 {
                                     "@type": "WorkflowStep",
@@ -182,7 +182,7 @@
                                     "left": "320",
                                     "stepType": "\/api\/3\/workflow_step_types\/2597053c-e718-44b4-8394-4d40fe26d357",
                                     "group": null,
-                                    "uuid": "f0c8b16c-b2f5-4d0a-8df6-a616c3fe2ee8"
+                                    "uuid": "30b813d2-b353-451f-b134-4f33ba8345c9"
                                 },
                                 {
                                     "@type": "WorkflowStep",
@@ -200,24 +200,24 @@
                                     "left": "125",
                                     "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
                                     "group": null,
-                                    "uuid": "11ed635d-ce6c-43d4-acb5-6efdb71b12c1"
+                                    "uuid": "338a2460-bc59-4d76-9fd3-98af5025fd1a"
                                 }
                             ],
                             "routes": [
                                 {
                                     "@type": "WorkflowRoute",
                                     "name": "Start -> Create Record",
-                                    "targetStep": "\/api\/3\/workflow_steps\/f0c8b16c-b2f5-4d0a-8df6-a616c3fe2ee8",
-                                    "sourceStep": "\/api\/3\/workflow_steps\/11ed635d-ce6c-43d4-acb5-6efdb71b12c1",
+                                    "targetStep": "\/api\/3\/workflow_steps\/30b813d2-b353-451f-b134-4f33ba8345c9",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/338a2460-bc59-4d76-9fd3-98af5025fd1a",
                                     "label": null,
                                     "isExecuted": false,
                                     "group": null,
-                                    "uuid": "d3cd1326-2d25-4a48-bb59-75d406ddf213"
+                                    "uuid": "78c4c55a-47cb-4b55-ab3a-078ecb024bd5"
                                 }
                             ],
                             "groups": [],
                             "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
-                            "uuid": "d15a0ac0-d58e-405f-bafa-91f95bda0142",
+                            "uuid": "bc9cc92d-072a-42a6-aa3c-dac906a3a625",
                             "owners": [],
                             "isPrivate": false,
                             "deletedAt": null,
@@ -242,7 +242,7 @@
                             "synchronous": false,
                             "collection": "\/api\/3\/workflow_collections\/01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
                             "versions": [],
-                            "triggerStep": "\/api\/3\/workflow_steps\/8c23d6fa-f1b6-43bf-bfaf-b07dad0bbf45",
+                            "triggerStep": "\/api\/3\/workflow_steps\/f5e9793e-b3a9-4002-8536-abbeeafc2d64",
                             "steps": [
                                 {
                                     "@type": "WorkflowStep",
@@ -261,7 +261,7 @@
                                     "left": "480",
                                     "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
                                     "group": null,
-                                    "uuid": "76f775e1-976f-421a-b53c-c10c5dc3362e"
+                                    "uuid": "69a75709-96e5-4d22-9093-dda46d28324f"
                                 },
                                 {
                                     "@type": "WorkflowStep",
@@ -283,7 +283,7 @@
                                     "left": "320",
                                     "stepType": "\/api\/3\/workflow_step_types\/0bfed618-0316-11e7-93ae-92361f002671",
                                     "group": null,
-                                    "uuid": "769bd6e5-909e-4368-b836-8a456a64ad15"
+                                    "uuid": "45c6bc85-d62e-4ffd-9d8d-115b9e9832ea"
                                 },
                                 {
                                     "@type": "WorkflowStep",
@@ -302,34 +302,34 @@
                                     "left": "125",
                                     "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
                                     "group": null,
-                                    "uuid": "8c23d6fa-f1b6-43bf-bfaf-b07dad0bbf45"
+                                    "uuid": "f5e9793e-b3a9-4002-8536-abbeeafc2d64"
                                 }
                             ],
                             "routes": [
                                 {
                                     "@type": "WorkflowRoute",
                                     "name": "Fetch Sample Data -> Configuration",
-                                    "targetStep": "\/api\/3\/workflow_steps\/76f775e1-976f-421a-b53c-c10c5dc3362e",
-                                    "sourceStep": "\/api\/3\/workflow_steps\/769bd6e5-909e-4368-b836-8a456a64ad15",
+                                    "targetStep": "\/api\/3\/workflow_steps\/69a75709-96e5-4d22-9093-dda46d28324f",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/45c6bc85-d62e-4ffd-9d8d-115b9e9832ea",
                                     "label": null,
                                     "isExecuted": false,
                                     "group": null,
-                                    "uuid": "1b2d67c8-83c1-419b-ac9b-210498cf14ab"
+                                    "uuid": "404f3284-10ac-45b5-93fc-488faf8016d1"
                                 },
                                 {
                                     "@type": "WorkflowRoute",
                                     "name": "Start -> Fetch Sample Data",
-                                    "targetStep": "\/api\/3\/workflow_steps\/769bd6e5-909e-4368-b836-8a456a64ad15",
-                                    "sourceStep": "\/api\/3\/workflow_steps\/8c23d6fa-f1b6-43bf-bfaf-b07dad0bbf45",
+                                    "targetStep": "\/api\/3\/workflow_steps\/45c6bc85-d62e-4ffd-9d8d-115b9e9832ea",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/f5e9793e-b3a9-4002-8536-abbeeafc2d64",
                                     "label": null,
                                     "isExecuted": false,
                                     "group": null,
-                                    "uuid": "4014497d-f549-4b06-a55a-ec6916729156"
+                                    "uuid": "0ef12509-1584-45bc-b140-8f2be093d077"
                                 }
                             ],
                             "groups": [],
                             "priority": null,
-                            "uuid": "80233bd6-d8b1-4c58-8b25-004522030af9",
+                            "uuid": "6096cb08-964f-4d86-989c-f84cf7a128da",
                             "owners": [],
                             "isPrivate": false,
                             "deletedAt": null,
@@ -354,7 +354,7 @@
                             "synchronous": false,
                             "collection": "\/api\/3\/workflow_collections\/01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
                             "versions": [],
-                            "triggerStep": "\/api\/3\/workflow_steps\/791f6910-0b5a-4a88-b751-53ace9a6fd3b",
+                            "triggerStep": "\/api\/3\/workflow_steps\/2da6a117-5024-4a1f-93a0-cf3207d0bc28",
                             "steps": [
                                 {
                                     "@type": "WorkflowStep",
@@ -364,14 +364,14 @@
                                         "arguments": [],
                                         "apply_async": false,
                                         "step_variables": [],
-                                        "workflowReference": "\/api\/3\/workflows\/80233bd6-d8b1-4c58-8b25-004522030af9"
+                                        "workflowReference": "\/api\/3\/workflows\/6096cb08-964f-4d86-989c-f84cf7a128da"
                                     },
                                     "status": null,
                                     "top": "140",
                                     "left": "240",
                                     "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
                                     "group": null,
-                                    "uuid": "5027f30c-a660-4a6d-a928-6bb998452277"
+                                    "uuid": "328e64d3-407b-4ee0-a06f-9a3272f07bf2"
                                 },
                                 {
                                     "@type": "WorkflowStep",
@@ -391,10 +391,10 @@
                                             ],
                                             "matrices": "{{ vars.result.matrices }}",
                                             "upload_json": false,
-                                            "create_pb_id": "d15a0ac0-d58e-405f-bafa-91f95bda0142",
-                                            "force_ingestion": false
+                                            "create_pb_id": "bc9cc92d-072a-42a6-aa3c-dac906a3a625",
+                                            "force_ingestion": ""
                                         },
-                                        "version": "2.0.2",
+                                        "version": "2.0.1",
                                         "connector": "mitre-attack",
                                         "operation": "get_mitre_data",
                                         "operationTitle": "Get MITRE Data",
@@ -406,7 +406,7 @@
                                     "left": "440",
                                     "stepType": "\/api\/3\/workflow_step_types\/0bfed618-0316-11e7-93ae-92361f002671",
                                     "group": null,
-                                    "uuid": "be3d358a-f56b-4ccf-ba82-f823741c1750"
+                                    "uuid": "d581ed8f-f178-4880-867a-921e47508b24"
                                 },
                                 {
                                     "@type": "WorkflowStep",
@@ -424,34 +424,34 @@
                                     "left": "40",
                                     "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
                                     "group": null,
-                                    "uuid": "791f6910-0b5a-4a88-b751-53ace9a6fd3b"
+                                    "uuid": "2da6a117-5024-4a1f-93a0-cf3207d0bc28"
                                 }
                             ],
                             "routes": [
                                 {
                                     "@type": "WorkflowRoute",
                                     "name": "Fetch -> Fetch And Create",
-                                    "targetStep": "\/api\/3\/workflow_steps\/be3d358a-f56b-4ccf-ba82-f823741c1750",
-                                    "sourceStep": "\/api\/3\/workflow_steps\/5027f30c-a660-4a6d-a928-6bb998452277",
+                                    "targetStep": "\/api\/3\/workflow_steps\/d581ed8f-f178-4880-867a-921e47508b24",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/328e64d3-407b-4ee0-a06f-9a3272f07bf2",
                                     "label": null,
                                     "isExecuted": false,
                                     "group": null,
-                                    "uuid": "8f015d8c-b363-46b6-a75b-d0f198130185"
+                                    "uuid": "1ffedbe0-34c2-48bc-896c-35e81bda834e"
                                 },
                                 {
                                     "@type": "WorkflowRoute",
                                     "name": "Start -> Fetch",
-                                    "targetStep": "\/api\/3\/workflow_steps\/5027f30c-a660-4a6d-a928-6bb998452277",
-                                    "sourceStep": "\/api\/3\/workflow_steps\/791f6910-0b5a-4a88-b751-53ace9a6fd3b",
+                                    "targetStep": "\/api\/3\/workflow_steps\/328e64d3-407b-4ee0-a06f-9a3272f07bf2",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/2da6a117-5024-4a1f-93a0-cf3207d0bc28",
                                     "label": null,
                                     "isExecuted": false,
                                     "group": null,
-                                    "uuid": "18d317b9-ab9c-42e8-bcf8-2cc6b35ba904"
+                                    "uuid": "43189e41-7a44-4de1-92f5-98bb717a711c"
                                 }
                             ],
                             "groups": [],
                             "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
-                            "uuid": "32012080-abc3-4be8-904d-a80167fa8d45",
+                            "uuid": "d5a5739f-17e9-4022-9d37-8c588913afbb",
                             "owners": [],
                             "isPrivate": false,
                             "deletedAt": null,
@@ -462,7 +462,7 @@
                             ],
                             "schedules": [
                                 {
-                                    "id": "gAAAAABkSkL3uqysdcGFNmNbyXHQdVNQwyD8-K23MzvOnwo9OnfHnceAKWAyLG2rCJm0CPQEO4LxwrDOtOHCyZQ2YoNK5pwM-g==",
+                                    "id": "gAAAAABkSm8QFFPjjpyBUltDnS-k7_yD9C0ytucsGF933NaFERRsySHWn-EypLeWjrrP_p3wqXtBsLIT7tCkD8Eir8129A-99w==",
                                     "crontab": {
                                         "id": 11,
                                         "minute": "01",
@@ -478,7 +478,7 @@
                                     "args": "[]",
                                     "kwargs": {
                                         "exit_if_running": false,
-                                        "wf_iri": "\/api\/3\/workflows\/32012080-abc3-4be8-904d-a80167fa8d45",
+                                        "wf_iri": "\/api\/3\/workflows\/d5a5739f-17e9-4022-9d37-8c588913afbb",
                                         "createUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
                                         "name": "Ingestion_mitre-attack_Demo_01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
                                         "description": "Ingestion_mitre-attack_Demo_01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
@@ -487,7 +487,7 @@
                                         },
                                         "referenceid": null,
                                         "schedule_entry_name": "Ingestion_mitre-attack_Demo_01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
-                                        "schedule_id": "118fabbe-36da-41d6-aa06-23343765234e"
+                                        "schedule_id": "f580dfe0-04da-4416-a853-e937c61d1390"
                                     },
                                     "queue": null,
                                     "exchange": null,
@@ -501,7 +501,7 @@
                                     "enabled": false,
                                     "last_run_at": null,
                                     "total_run_count": 0,
-                                    "date_changed": "2023-04-27T08:50:48.910509Z",
+                                    "date_changed": "2023-04-27T12:44:17.926560Z",
                                     "description": "Ingestion_mitre-attack_Demo_01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
                                     "solar": null,
                                     "clocked": null

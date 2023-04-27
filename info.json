@@ -101,7 +101,7 @@
     "postInstallConfig": {
         "enabled": false
     },
-    "date": "2023-04-26T17:47:08+00:00",
+    "date": "2023-04-27T12:48:17+00:00",
     "contents": {
         "playbooks": [
             {
@@ -111,13 +111,11 @@
         "connectors": [
             {
                 "name": "Code Snippet",
-                "apiName": "code-snippet",
-                "version": "2.0.3"
+                "apiName": "code-snippet"
             },
             {
                 "name": "MITRE ATT&CK",
-                "apiName": "mitre-attack",
-                "version": "2.0.2"
+                "apiName": "mitre-attack"
             }
         ]
     }
