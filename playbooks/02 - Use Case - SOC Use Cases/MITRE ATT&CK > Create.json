@@ -1,0 +1,91 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "MITRE ATT&CK > Create",
+    "aliasName": null,
+    "tag": "#dataingestion #mitre-attack",
+    "description": "Creates a sample MITRE record",
+    "isActive": true,
+    "debug": false,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [],
+    "synchronous": false,
+    "collection": "\/api\/3\/workflow_collections\/d3aa49f6-4336-422f-897b-7bea68608e96",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/e0fbd04d-2282-46e8-a977-dc645e2e8d6a",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "Create Record",
+            "description": null,
+            "arguments": {
+                "resource": {
+                    "url": "{{vars.sourcedata[\"external_references\"][0][\"url\"]}}",
+                    "name": "{{vars.sourcedata[\"name\"]}}",
+                    "created": "{{vars.sourcedata[\"created\"]}}",
+                    "mitreId": "<System Mapping. Do not modify>",
+                    "version": "{{vars.sourcedata[\"x_mitre_version\"]}}",
+                    "__replace": "",
+                    "description": "{{vars.sourcedata[\"description\"]}}",
+                    "lastModified": "{{vars.sourcedata[\"modified\"]}}"
+                },
+                "_showJson": false,
+                "operation": "Overwrite",
+                "collection": "\/api\/3\/mitre_groups",
+                "__recommend": [],
+                "fieldOperation": {
+                    "recordTags": "Overwrite"
+                },
+                "step_variables": []
+            },
+            "status": null,
+            "top": "120",
+            "left": "320",
+            "stepType": "\/api\/3\/workflow_step_types\/2597053c-e718-44b4-8394-4d40fe26d357",
+            "group": null,
+            "uuid": "30f0c32d-314e-4432-b2f6-592e376c4f12"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "step_variables": {
+                    "input": {
+                        "params": []
+                    }
+                }
+            },
+            "status": null,
+            "top": "30",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+            "group": null,
+            "uuid": "e0fbd04d-2282-46e8-a977-dc645e2e8d6a"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> Create Record",
+            "targetStep": "\/api\/3\/workflow_steps\/30f0c32d-314e-4432-b2f6-592e376c4f12",
+            "sourceStep": "\/api\/3\/workflow_steps\/e0fbd04d-2282-46e8-a977-dc645e2e8d6a",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "08935839-9e64-4b9e-b914-84cab7d5cb00"
+        }
+    ],
+    "groups": [],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "uuid": "63c2fbae-8357-4283-8a01-d88874e6b63f",
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null,
+    "recordTags": [
+        "dataingestion",
+        "create",
+        "mitre-attack"
+    ]
+}

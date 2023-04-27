@@ -93,20 +93,30 @@
     ],
     "prerequisite": null,
     "publisher": "Fortinet",
-    "description": "This Solution Pack\u00a0is a\u00a0collection of SPs for creating a demo setup in one\u00a0click and auto-triggers some scenarios.",
-    "help": null,
+    "description": "This Solution Pack is a collection of SPs for creating a demo setup in one click and auto-triggers some scenarios.",
+    "help": "https://github.com/fortinet-fortisoar/solution-pack-soc-use-case/blob/release/1.0.0/README.md",
     "category": [],
     "supportInfo": null,
     "iconLarge": null,
     "postInstallConfig": {
         "enabled": false
     },
-    "date": "2023-04-19T13:41:06+00:00",
+    "date": "2023-04-26T17:47:08+00:00",
     "contents": {
+        "playbooks": [
+            {
+                "name": "02 - Use Case - SOC Use Cases"
+            }
+        ],
         "connectors": [
             {
                 "name": "Code Snippet",
                 "apiName": "code-snippet"
+            },
+            {
+                "name": "MITRE ATT&CK",
+                "apiName": "mitre-attack",
+                "version": "2.0.2"
             }
         ]
     }

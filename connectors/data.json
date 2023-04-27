@@ -8,10 +8,10 @@
         "operation_roles": [],
         "configurations": [
             {
-                "id": 4,
+                "id": 38,
                 "config_id": "b5195722-9917-4e6e-ac0f-cddab46620ee",
                 "status": 1,
-                "name": "demo",
+                "name": "Demo",
                 "default": true,
                 "config": {
                     "allow_imports": true
@@ -25,6 +25,43 @@
         ],
         "dataImports": [],
         "install_mode": "rpm",
+        "ingestionPlaybooks": {
+            "collections": [],
+            "exported_tags": []
+        }
+    },
+    {
+        "name": "mitre-attack",
+        "label": "MITRE ATT&CK",
+        "category": "Information",
+        "description": "The MITRE ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies. Connector helps to replicate knowledge base of adversary tactics and techniques based on real-world observations",
+        "publisher": null,
+        "version": "2.0.2",
+        "operation_roles": [],
+        "configurations": [
+            {
+                "id": 36,
+                "config_id": "01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
+                "status": 1,
+                "name": "Demo",
+                "default": true,
+                "config": {
+                    "matrices": [
+                        "Enterprise"
+                    ],
+                    "upload_json": false
+                },
+                "remote_status": [],
+                "health_status": [],
+                "connector": 30,
+                "agent": "e402f0e31ea9a0bf97ee5ad9aa834c38",
+                "teams": []
+            }
+        ],
+        "dataImports": [],
+        "install_mode": "rpm",
+        "rpm_name": "cyops-connector-mitre-attack-2.0.2",
+        "installer_path": "cyops-connector-mitre-attack-2.0.2",
         "ingestionPlaybooks": {
             "collections": [],
             "exported_tags": []
