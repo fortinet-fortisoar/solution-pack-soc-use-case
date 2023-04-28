@@ -4,7 +4,7 @@
     "fsrMinCompatibility": "7.3.0",
     "type": "solutionpack",
     "local": true,
-    "label": "SOC Use Case",
+    "label": "SOC Use Cases",
     "dependencies": [
         {
             "name": "sOARFramework",
@@ -101,7 +101,7 @@
     "postInstallConfig": {
         "enabled": false
     },
-    "date": "2023-04-26T17:47:08+00:00",
+    "date": "2023-04-27T12:48:17+00:00",
     "contents": {
         "playbooks": [
             {
@@ -115,8 +115,7 @@
             },
             {
                 "name": "MITRE ATT&CK",
-                "apiName": "mitre-attack",
-                "version": "2.0.2"
+                "apiName": "mitre-attack"
             }
         ]
     }
