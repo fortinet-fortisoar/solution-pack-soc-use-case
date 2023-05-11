@@ -4,7 +4,7 @@
     "fsrMinCompatibility": "7.3.0",
     "type": "solutionpack",
     "local": true,
-    "label": "SOC Use Cases",
+    "label": "SOC Experience",
     "dependencies": [
         {
             "name": "sOARFramework",
