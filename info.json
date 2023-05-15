@@ -1,5 +1,5 @@
 {
-    "name": "sOCUseCase",
+    "name": "sOCExperience",
     "version": "1.0.0",
     "fsrMinCompatibility": "7.3.0",
     "type": "solutionpack",
@@ -34,12 +34,6 @@
             "name": "mITREATT&CKEnrichmentFramework",
             "type": "solutionpack",
             "label": "MITRE ATT&CK Enrichment Framework",
-            "minVersion": null
-        },
-        {
-            "name": "gDPRFramework",
-            "type": "solutionpack",
-            "label": "GDPR Framework",
             "minVersion": null
         },
         {
@@ -89,6 +83,24 @@
             "type": "solutionpack",
             "label": "Data Leakage Threat Response",
             "minVersion": null
+        },
+        {
+            "name": "sOCOverviewMetrics",
+            "type": "solutionpack",
+            "label": "SOC Overview Metrics",
+            "minVersion": null
+        },
+        {
+            "name": "threat-intel-management",
+            "type": "solutionpack",
+            "label": "Threat Intel Management",
+            "minVersion": null
+        },
+        {
+            "name": "continuousDelivery",
+            "type": "solutionpack",
+            "label": "Continuous Delivery",
+            "minVersion": null
         }
     ],
     "prerequisite": null,
@@ -101,13 +113,32 @@
     "postInstallConfig": {
         "enabled": false
     },
-    "date": "2023-04-27T12:48:17+00:00",
+    "date": "2023-05-11T13:33:04+00:00",
     "contents": {
+        "views": {
+            "navigation": [
+                "Dashboard",
+                "Queue & Shift Management",
+                "Incident Response",
+                "Threat Intel Management",
+                "Vulnerability Management",
+                "Automation",
+                "Resources",
+                "Reports",
+                "Content Hub",
+                "Help",
+                "User Community",
+                "Simulations",
+                "Continuous Delivery"
+            ]
+        },
         "playbooks": [
             {
                 "name": "02 - Use Case - SOC Use Cases"
             }
         ],
+        "globalVariables": [],
+        "playbookBlocks": [],
         "connectors": [
             {
                 "name": "Code Snippet",
