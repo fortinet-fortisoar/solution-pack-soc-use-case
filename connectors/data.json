@@ -4,17 +4,18 @@
         "label": "Code Snippet",
         "category": "utilities",
         "description": "Execute code snippets as part of your Playbooks",
-        "publisher": null,
+        "publisher": "Fortinet",
         "operation_roles": [],
         "configurations": [
             {
-                "id": 4,
+                "id": 6,
                 "config_id": "b5195722-9917-4e6e-ac0f-cddab46620ee",
                 "status": 1,
-                "name": "Demo",
-                "default": true,
+                "name": "SOAR Framework Default",
+                "default": false,
                 "config": {
-                    "allow_imports": true
+                    "allow_imports": false,
+                    "restrict_imports": "dns,pandas,numpy,json,re,csv,arrow"
                 },
                 "remote_status": [],
                 "health_status": [],
@@ -35,7 +36,7 @@
         "label": "MITRE ATT&CK",
         "category": "Information",
         "description": "The MITRE ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies. Connector helps to replicate knowledge base of adversary tactics and techniques based on real-world observations",
-        "publisher": null,
+        "publisher": "Fortinet",
         "operation_roles": [],
         "configurations": [
             {
