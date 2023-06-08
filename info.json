@@ -37,18 +37,6 @@
             "minVersion": null
         },
         {
-            "name": "vulnerabilityManagement",
-            "type": "solutionpack",
-            "label": "Vulnerability Management",
-            "minVersion": null
-        },
-        {
-            "name": "automatedEmployeeOnboarding",
-            "type": "solutionpack",
-            "label": "Automated Employee Onboarding",
-            "minVersion": null
-        },
-        {
             "name": "c2MalwareTrafficResponse",
             "type": "solutionpack",
             "label": "C2 Malware Traffic Response",
@@ -113,28 +101,14 @@
     "postInstallConfig": {
         "enabled": false
     },
-    "date": "2023-05-11T13:33:04+00:00",
+    "date": "2023-06-06T09:20:55+00:00",
     "contents": {
-        "views": {
-            "navigation": [
-                "Dashboard",
-                "Queue & Shift Management",
-                "Incident Response",
-                "Threat Intel Management",
-                "Vulnerability Management",
-                "Automation",
-                "Resources",
-                "Reports",
-                "Content Hub",
-                "Help",
-                "User Community",
-                "Simulations",
-                "Continuous Delivery"
-            ]
-        },
         "playbooks": [
             {
-                "name": "02 - Use Case - SOC Use Cases"
+                "name": "02 - Use Case - SOC Experience"
+            },
+            {
+                "name": "MITRE ATT&CK 2.0.2 DemoIngestion(01e4e6b4-c34e-4fc1-b692-bb08591f1fe5)"
             }
         ],
         "globalVariables": [],

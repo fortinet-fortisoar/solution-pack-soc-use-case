@@ -1,11 +1,11 @@
 {
     "@context": "\/api\/3\/contexts\/WorkflowCollection",
     "@type": "WorkflowCollection",
-    "name": "02 - Use Case - SOC Use Cases",
+    "name": "MITRE ATT&CK 2.0.2 DemoIngestion(01e4e6b4-c34e-4fc1-b692-bb08591f1fe5)",
     "description": null,
-    "visible": true,
+    "visible": false,
     "image": null,
-    "uuid": "d3aa49f6-4336-422f-897b-7bea68608e96",
+    "uuid": "01e4e6b4-c34e-4fc1-b692-bb08591f1fe5",
     "deletedAt": null,
     "recordTags": []
 }
