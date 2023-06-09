@@ -21,7 +21,12 @@ The **SOC Experience** solution pack depends on the following solution packs tha
 | C2 Malware Traffic Response | Required to demostrate investigation of C2 attacks |
 | Command and Control Response | Required to demostrate investigation of Command and Control attacks |
 | Lateral Movement and VPN Breach Response | Required to demostrate investigation of Lateral Movement and VPN Breach attacks |
-
+| FortiSIEM Essentials | Required for FortiSIEM integration in FortiSOAR |
+| Impossible Traveller Threat Response | Required to demostrate investigation of Concurrent Login type of attacks |
+| Data Leakage Threat Response | Required to demostrate investigation of Data Leakage Threat attacks |
+| SOC Overview Metrics | Required for SOC Management Widget and Dashboard |
+| Threat Intel Management | Required for Threat Intellgence Modules and Reports |
+| Continuous Delivery | Required to demostrate CICD |
 
 # Configuration
 
