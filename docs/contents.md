@@ -2,33 +2,25 @@
 |----------------------|
 # Contents
 
-The **Phishing Email Response** solution pack contains the following resources.
+The **SOC Experience** solution pack contains the following resources.
 
-## Global Variable
+## Connector Configurations
 
-| Name            | Description                                                                                                     |
-|:----------------|:----------------------------------------------------------------------------------------------------------------|
-| `Default_Email` | This global variable contains the email address which sends an acknowledgment and other emails to the reporter. |
-
-## Record Set
-
-| Name     | Description                                                                                                                                                                                                          |
-|:---------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Scenario | A simulation that helps you understand the *Phishing Email Response* solution pack by creating a demo phishing email alert. Executing this scenario emulates this solution pack's behavior on receiving such alerts. |
+| Connector | Configuration Name | Description |
+|:-|:-|:-|
+| Code Snippet | SOAR Framework Default | The code snippet connector is set up with all the necessary libraries. |
+| MITRE ATT&CK | Demo | The MITRE ATT&CK connector is configured for data ingestion. |
 
 ## Playbook Collection
 
-| 02 - Use Case - Phishing Email Response                                  |
+| 02 - Use Case - SOC Experience                                  |
 |:-------------------------------------------------------------------------|
 
 
 | Playbook Name                                                          | Description                                                                       |
 |:-----------------------------------------------------------------------|:----------------------------------------------------------------------------------|
-| Investigate Suspicious Email                                           | Investigates alerts of type *Suspicious Email*                                    |
-| Generate Phishing Email Alert                                          | Generates a Phishing Email alert                                                  |
-| Email (Manual Upload) - Investigate                                    | Extracts email metadata from an uploaded email file                               |
-| Email (Manual Attach) - File to Alert (Suspicious Email)               | Attaches emails to alerts of type *Suspicious Email* and investigates             |
-| Email (Manual Upload) - Extract Attachments                            | Extracts attachments, creates indicators, and links to parent alert               |
-| URL > FortiSandbox > Enrichment<sup>New</sup>                          | Retrieves the reputation of indicators of type 'URL' using Fortinet FortiSandbox. |
+| Setup Demo SOC Enviornment                                           | Simulates scenarios to generate demo records and performs data ingestion for MITRE ATT&CK to obtain the latest records for all related modules.                                    |
+| Reset Demo SOC Enviornment                                          | Resets all the scenarios.                                                  |
+
 
 >**Warning:** We recommend you clone these playbooks before customizing to avoid information loss while upgrading the solution pack.

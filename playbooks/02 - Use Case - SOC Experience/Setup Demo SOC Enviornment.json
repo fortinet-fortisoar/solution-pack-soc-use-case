@@ -4,7 +4,7 @@
     "name": "Setup Demo SOC Enviornment",
     "aliasName": null,
     "tag": null,
-    "description": "Runs all the scenario to create demo records.",
+    "description": "Simulates scenarios to generate demo records and performs data ingestion for MITRE ATT&CK to obtain the latest records for all related modules.",
     "isActive": true,
     "debug": false,
     "singleRecordExecution": false,
