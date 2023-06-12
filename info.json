@@ -94,7 +94,7 @@
     "prerequisite": null,
     "publisher": "Fortinet",
     "description": "This Solution Pack is a collection of SPs for creating a demo setup in one click and auto-triggers some scenarios.",
-    "help": "https://github.com/fortinet-fortisoar/solution-pack-soc-use-case/blob/release/1.0.0/README.md",
+    "help": "https://github.com/fortinet-fortisoar/solution-pack-soc-expericence/blob/release/1.0.0/README.md",
     "category": [],
     "supportInfo": null,
     "iconLarge": null,
