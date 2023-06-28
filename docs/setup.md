@@ -11,22 +11,22 @@
 
 The **SOC Experience** solution pack depends on the following solution packs that are installed automatically &ndash; if not already installed.
 
-| Solution Pack Name | Purpose                                                  |
-|:-------------------|:---------------------------------------------------------|
-| SOAR Framework     |  Required for Incident Response modules                   |
-| SOC Simulator      |  Required for Scenario Module and SOC Simulator connector |
-| Phishing Email Response      | Required to demostrate investigation of Suspicious Emails |
-| Brute Force Attack Response    |  Required to demostrate investigation of Brute Force Attacks  |
-| MITRE ATT&CK Enrichment Framework | Required for MITRE Modules and MITRE connector |
-| C2 Malware Traffic Response | Required to demostrate investigation of C2 attacks |
-| Command and Control Response | Required to demostrate investigation of Command and Control attacks |
-| Lateral Movement and VPN Breach Response | Required to demostrate investigation of Lateral Movement and VPN Breach attacks |
-| FortiSIEM Essentials | Required for FortiSIEM integration in FortiSOAR |
-| Impossible Traveller Threat Response | Required to demostrate investigation of Concurrent Login type of attacks |
-| Data Leakage Threat Response | Required to demostrate investigation of Data Leakage Threat attacks |
-| SOC Overview Metrics | Required for SOC Management Widget and Dashboard |
-| Threat Intel Management | Required for Threat Intellgence Modules and Reports |
-| Continuous Delivery | Required to demostrate CICD |
+| SP Name                                  | Version         | Purpose                                                                          |
+|------------------------------------------|-----------------|----------------------------------------------------------------------------------|
+| SOAR Framework                           | 2.1.0 and later | Required for Incident Response modules                                           |
+| SOC Simulator                            | 1.0.2 and later | Required for Scenario Module and SOC Simulator connector                         |
+| Phishing Email Response                  | 1.0.1 and later | Required to demonstrate investigation of Suspicious Emails                       |
+| Brute Force Attack Response              | 1.2.0 and later | Required to demonstrate investigation of Brute Force Attacks                     |
+| MITRE ATT&CK Enrichment Framework        | 2.1.0 and later | Required for MITRE Modules and MITRE connector                                   |
+| C2 Malware Traffic Response              | 1.0.0 and later | Required to demonstrate investigation of C2 attacks                              |
+| Command and Control Response             | 1.0.0 and later | Required to demonstrate investigation of Command and Control attacks             |
+| Impossible Traveler Threat Response      | 1.0.0 and later | Required to demonstrate investigation of Lateral Movement and VPN Breach attacks |
+| Lateral Movement and VPN Breach Response | 1.0.1 and later | Required for FortiSIEM integration in FortiSOAR                                  |
+| SOC Overview Metrics                     | 1.0.2 and later | Required to demonstrate investigation of Concurrent Login type of attacks        |
+| Threat Intel Management                  | 1.2.0 and later | Required to demonstrate investigation of Data Leakage Threat attacks             |
+| FortiSIEM Essentials                     | 1.0.0 and later | Required for SOC Management Widget and Dashboard                                 |
+| Data Leakage Threat Response             | 1.0.0 and later | Required for Threat Intelligence Modules and Reports                             |
+| Continuous Delivery                      | 2.0.0 and later | Required to demonstrate CICD                                                     |
 
 # Configuration
 
@@ -34,3 +34,6 @@ For optimal performance of the **SOC Experience** solution pack, you must config
 
 - Threat intelligence connectors to enrich the context of a given indicator
     - To configure and use the VirusTotal connector as a source of threat intelligence, refer to [Configuring Virus Total](https://docs.fortinet.com/document/fortisoar/2.1.0/virustotal/166/virustotal-v2-1-0#Configuration_parameters)
+
+| [Usage](./usage.md) | [Contents](./contents.md) |
+|---------------------|---------------------------|
