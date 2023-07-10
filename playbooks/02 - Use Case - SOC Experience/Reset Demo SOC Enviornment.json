@@ -1,0 +1,182 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "Reset Demo SOC Enviornment",
+    "aliasName": null,
+    "tag": null,
+    "description": "Resets all the scenarios.",
+    "isActive": true,
+    "debug": false,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [],
+    "synchronous": false,
+    "collection": "\/api\/3\/workflow_collections\/d3aa49f6-4336-422f-897b-7bea68608e96",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/497c6eef-31d1-40bf-83df-e52e1c61e876",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "Build Payload",
+            "description": null,
+            "arguments": {
+                "_dummy": "{{vars.payload.update({'records':vars.scenario_iri_list})}}"
+            },
+            "status": null,
+            "top": "435",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "0ee007c2-e2ec-4493-a8fc-38db983c8ecc"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Configuration",
+            "description": null,
+            "arguments": {
+                "payload": "{\n  \"singleRecordExecution\": true,\n  \"__resource\": \"scenario\",\n  \"__uuid\": \"98506caa-32ab-429d-9c0f-42d92a71b5d1\"\n}",
+                "trigger_endpoint": "\/api\/triggers\/1\/action\/0bd7509e-8eef-4ba2-b64c-1307fb90a2d8"
+            },
+            "status": null,
+            "top": "165",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "9fce90b4-5fb1-4015-b4ca-75d26c21126f"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Get Scenarios Details",
+            "description": null,
+            "arguments": {
+                "query": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": []
+                },
+                "module": "scenario?$limit=30",
+                "checkboxFields": false,
+                "step_variables": {
+                    "scenario_iri_list": "{{vars.steps.Get_Scenarios_Details | json_query('[].\"@id\"')}}"
+                }
+            },
+            "status": null,
+            "top": "300",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/b593663d-7d13-40ce-a3a3-96dece928770",
+            "group": null,
+            "uuid": "6e8bbff9-0381-4f03-82f2-0f6517abeddf"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Reset Scenarios",
+            "description": null,
+            "arguments": {
+                "params": {
+                    "iri": "{{vars.trigger_endpoint}}",
+                    "body": "{{vars.payload}}",
+                    "method": "POST"
+                },
+                "version": "3.2.3",
+                "connector": "cyops_utilities",
+                "operation": "make_cyops_request",
+                "operationTitle": "FSR: Make FortiSOAR API Call",
+                "step_variables": []
+            },
+            "status": null,
+            "top": "570",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/0109f35d-090b-4a2b-bd8a-94cbc3508562",
+            "group": null,
+            "uuid": "67996e5b-4667-47a5-98f4-3c790a4cca2e"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "route": "ffe6f468-5d72-4978-8906-3392465744c8",
+                "resources": [
+                    "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                    "input": {
+                        "params": [],
+                        "records": "{{vars.input.records}}"
+                    }
+                },
+                "displayConditions": {
+                    "alerts": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": []
+                    }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": true,
+                "singleRecordExecution": false
+            },
+            "status": null,
+            "top": "30",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+            "group": null,
+            "uuid": "497c6eef-31d1-40bf-83df-e52e1c61e876"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "Build Payload -> Simulate Scenarios",
+            "targetStep": "\/api\/3\/workflow_steps\/67996e5b-4667-47a5-98f4-3c790a4cca2e",
+            "sourceStep": "\/api\/3\/workflow_steps\/0ee007c2-e2ec-4493-a8fc-38db983c8ecc",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "65b946be-d152-431c-9c29-798ec3622e2a"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Configuration -> Get Scenarios Details",
+            "targetStep": "\/api\/3\/workflow_steps\/6e8bbff9-0381-4f03-82f2-0f6517abeddf",
+            "sourceStep": "\/api\/3\/workflow_steps\/9fce90b4-5fb1-4015-b4ca-75d26c21126f",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "2ffa3798-8e37-4f7a-84c3-cccbeb8ed068"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Get Scenarios Details -> Build Payload",
+            "targetStep": "\/api\/3\/workflow_steps\/0ee007c2-e2ec-4493-a8fc-38db983c8ecc",
+            "sourceStep": "\/api\/3\/workflow_steps\/6e8bbff9-0381-4f03-82f2-0f6517abeddf",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "990fe9f6-9db1-4250-9701-4fa9e01ee4ea"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> Configuration",
+            "targetStep": "\/api\/3\/workflow_steps\/9fce90b4-5fb1-4015-b4ca-75d26c21126f",
+            "sourceStep": "\/api\/3\/workflow_steps\/497c6eef-31d1-40bf-83df-e52e1c61e876",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "b4e5e74a-18aa-4899-82b6-7daf76c01a29"
+        }
+    ],
+    "groups": [],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "uuid": "7e23a55f-7375-4b12-90f9-baf0046b82ab",
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null,
+    "recordTags": [
+        "ManualTrigger",
+        "Scenario"
+    ]
+}

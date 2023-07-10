@@ -1,0 +1,211 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "Setup Demo SOC Enviornment",
+    "aliasName": null,
+    "tag": null,
+    "description": "Simulates scenarios to generate demo records and performs data ingestion for MITRE ATT&CK to obtain the latest records for all related modules.",
+    "isActive": true,
+    "debug": false,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [],
+    "synchronous": false,
+    "collection": "\/api\/3\/workflow_collections\/d3aa49f6-4336-422f-897b-7bea68608e96",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/7c296c78-0b6a-4344-ade0-ef8be1a64b40",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "Build Payload",
+            "description": null,
+            "arguments": {
+                "_dummy": "{{vars.payload.update({'records':vars.scenario_iri_list})}}"
+            },
+            "status": null,
+            "top": "435",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "8ad70888-30e0-4353-85e8-267f7e231012"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Configuration",
+            "description": null,
+            "arguments": {
+                "payload": "{\n  \"singleRecordExecution\": true,\n  \"__resource\": \"scenario\",\n  \"__uuid\": \"a10522ac-2622-40bd-ad79-4487d9a1d7d7\"\n}",
+                "trigger_scenario_endpoint": "\/api\/triggers\/1\/action\/7f0834e0-f79e-49a2-aa19-2ef7ce9aac32"
+            },
+            "status": null,
+            "top": "165",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "11be7170-eb18-47f0-8864-8f75e2d69a20"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Get Scenarios Details",
+            "description": null,
+            "arguments": {
+                "query": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": []
+                },
+                "module": "scenario?$limit=30",
+                "checkboxFields": false,
+                "step_variables": {
+                    "scenario_iri_list": "{{vars.steps.Get_Scenarios_Details | json_query('[].\"@id\"')}}"
+                }
+            },
+            "status": null,
+            "top": "300",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/b593663d-7d13-40ce-a3a3-96dece928770",
+            "group": null,
+            "uuid": "24dd88f2-c559-4623-87b7-eac7c40364c2"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "MITRE ATTACK Data Ingestion",
+            "description": null,
+            "arguments": {
+                "arguments": [],
+                "apply_async": false,
+                "step_variables": [],
+                "pass_parent_env": false,
+                "pass_input_record": false,
+                "workflowReference": "\/api\/3\/workflows\/d5a5739f-17e9-4022-9d37-8c588913afbb"
+            },
+            "status": null,
+            "top": "705",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+            "group": null,
+            "uuid": "0f53b984-bef0-445b-8f65-ff60ffd51f64"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Simulate Scenarios",
+            "description": null,
+            "arguments": {
+                "params": {
+                    "iri": "{{vars.trigger_scenario_endpoint}}",
+                    "body": "{{vars.payload}}",
+                    "method": "POST"
+                },
+                "version": "3.2.3",
+                "connector": "cyops_utilities",
+                "operation": "make_cyops_request",
+                "operationTitle": "FSR: Make FortiSOAR API Call",
+                "step_variables": []
+            },
+            "status": null,
+            "top": "570",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/0109f35d-090b-4a2b-bd8a-94cbc3508562",
+            "group": null,
+            "uuid": "d6bd0c93-d459-485a-b559-f4f29d348793"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "route": "6b872a1d-7bfd-476b-b46d-f002a857b6e5",
+                "resources": [
+                    "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                    "input": {
+                        "params": [],
+                        "records": "{{vars.input.records}}"
+                    }
+                },
+                "displayConditions": {
+                    "alerts": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": []
+                    }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": true,
+                "singleRecordExecution": false
+            },
+            "status": null,
+            "top": "30",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+            "group": null,
+            "uuid": "7c296c78-0b6a-4344-ade0-ef8be1a64b40"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "Build Payload -> Simulate Scenarios",
+            "targetStep": "\/api\/3\/workflow_steps\/d6bd0c93-d459-485a-b559-f4f29d348793",
+            "sourceStep": "\/api\/3\/workflow_steps\/8ad70888-30e0-4353-85e8-267f7e231012",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "ba58269c-7c3d-4a80-920f-028386b5ba41"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Configuration -> Get Scenarios Details",
+            "targetStep": "\/api\/3\/workflow_steps\/24dd88f2-c559-4623-87b7-eac7c40364c2",
+            "sourceStep": "\/api\/3\/workflow_steps\/11be7170-eb18-47f0-8864-8f75e2d69a20",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "45c03996-8e42-4025-a836-a1b0c989eec5"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Get Scenarios Details -> Build Payload",
+            "targetStep": "\/api\/3\/workflow_steps\/8ad70888-30e0-4353-85e8-267f7e231012",
+            "sourceStep": "\/api\/3\/workflow_steps\/24dd88f2-c559-4623-87b7-eac7c40364c2",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "967644ed-c149-462a-8b42-86884b69037e"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Simulate Scenarios -> MITRE ATTACK Data Ingestion",
+            "targetStep": "\/api\/3\/workflow_steps\/0f53b984-bef0-445b-8f65-ff60ffd51f64",
+            "sourceStep": "\/api\/3\/workflow_steps\/d6bd0c93-d459-485a-b559-f4f29d348793",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "609e0fe0-3b9f-4c64-a632-48b611a1a42e"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> Configuration",
+            "targetStep": "\/api\/3\/workflow_steps\/11be7170-eb18-47f0-8864-8f75e2d69a20",
+            "sourceStep": "\/api\/3\/workflow_steps\/7c296c78-0b6a-4344-ade0-ef8be1a64b40",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "41490717-e43a-4f19-95c5-a0a11a4d4817"
+        }
+    ],
+    "groups": [],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "uuid": "0240aeaf-c399-40f9-8b15-8e1c702e70fc",
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null,
+    "recordTags": [
+        "ManualTrigger",
+        "Scenario"
+    ]
+}
