@@ -1,6 +1,6 @@
 {
     "name": "sOCExperience",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "fsrMinCompatibility": "7.3.0",
     "type": "solutionpack",
     "local": true,
@@ -89,12 +89,18 @@
             "type": "solutionpack",
             "label": "Continuous Delivery",
             "minVersion": null
+        },
+        {
+            "name": "sOCOverviewSankey",
+            "type": "solutionpack",
+            "label": "Sankey",
+            "minVersion": null
         }
     ],
     "prerequisite": null,
     "publisher": "Fortinet",
     "description": "This Solution Pack is a collection of SPs for creating a demo setup in one click and auto-triggers some scenarios.",
-    "help": "https://github.com/fortinet-fortisoar/solution-pack-soc-experience/blob/release/1.0.0/README.md",
+    "help": "https://github.com/fortinet-fortisoar/solution-pack-soc-experience/blob/release/1.0.1/README.md",
     "category": [],
     "supportInfo": null,
     "iconLarge": null,
@@ -108,11 +114,9 @@
                 "name": "02 - Use Case - SOC Experience"
             },
             {
-                "name": "MITRE ATT&CK 2.0.2 DemoIngestion(01e4e6b4-c34e-4fc1-b692-bb08591f1fe5)"
+                "name": "MITRE ATT&CK 2.0.2 Demo Ingestion"
             }
         ],
-        "globalVariables": [],
-        "playbookBlocks": [],
         "connectors": [
             {
                 "name": "Code Snippet",
