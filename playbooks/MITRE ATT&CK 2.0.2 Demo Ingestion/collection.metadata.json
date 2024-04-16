@@ -1,7 +1,7 @@
 {
     "@context": "\/api\/3\/contexts\/WorkflowCollection",
     "@type": "WorkflowCollection",
-    "name": "MITRE ATT&CK 2.0.2 DemoIngestion",
+    "name": "MITRE ATT&CK 2.0.2 Demo Ingestion",
     "description": null,
     "visible": false,
     "image": null,
