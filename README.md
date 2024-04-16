@@ -4,6 +4,7 @@
 - **Certified**: No
 - **Publisher**: Fortinet
 - **Compatible Version**: FortiSOAR v7.4.0 and later
+- [Release Notes](./release_notes.md)
 
 # Overview
 
