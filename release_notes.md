@@ -2,4 +2,4 @@
 |---------------------|
 
 # What's New
-- Added **Sankey** solution pack 
+- We added the Sankey solution pack to enhance the demo experience by showing data in a Sankey representation.
